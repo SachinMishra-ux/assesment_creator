@@ -3,11 +3,11 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
-__version__ = "0.0.3"
+__version__ = "0.0.1"
 
-REPO_NAME = "IPYNBRENDERER"
+REPO_NAME = "assesment_creator"
 AUTHOR_USER_NAME = "SachinMishra-ux"
-SRC_REPO = "IPYNBrenderer"
+SRC_REPO = "assesment_creator"
 AUTHOR_EMAIL = "sachin19566@gmail.com"
 
 setuptools.setup(
@@ -15,7 +15,7 @@ setuptools.setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="A small python package",
+    description="assesment creator python package",
     long_description=long_description,
     long_description_content="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
