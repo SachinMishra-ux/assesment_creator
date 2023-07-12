@@ -19,7 +19,12 @@ def get_data(link: str) -> list:
     content = str(content)
     mixed_pattern = r'M7eMe">(.*?)\<|auto">(.*?)\<\/span>'
     qno_list = re.findall(mixed_pattern, content)
-    return qno_list
+    if len(qno_list)==0:
+        raise InvalidURLException(
+                    "No data found! Please check the link provided"
+                )
+    else:
+        return qno_list
 
 
 @ensure_annotations
@@ -28,14 +33,9 @@ def create_assesment(form_link: str, file_name: str) -> str:
         if form_link and file_name is not None:
             output_file(file_name)
             content_list = get_data(form_link)
-            if content_list is not None:
-                ans = create_docx(content_list, file_name)
-                if ans is not None:
-                    return f"Scraping done successfully! Check {file_name} 😀 Thank you!"
-                else:
-                    raise InvalidURLException(
-                        "No data found! Please check the link provided"
-                    )
+            ans = create_docx(content_list, file_name)
+            if ans is not None:
+                return f"Scraping done successfully! Check {file_name} 😀 Thank you!"
             else:
                 raise InvalidURLException(
                     "No data found! Please check the link provided"
