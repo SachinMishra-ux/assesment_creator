@@ -1,10 +1,8 @@
 import setuptools
+import io
 
-try:
-   import pypandoc
-   long_description = pypandoc.convert_file('README.md', 'rst')
-except(IOError, ImportError):
-   long_description = open('README.md').read()
+with io.open("README.md", encoding="utf-8") as f:
+    long_description = f.read()
 
 __version__ = "0.0.3"
 
@@ -26,5 +24,5 @@ setuptools.setup(
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src")
+    packages=setuptools.find_packages(where="src"),
 )
