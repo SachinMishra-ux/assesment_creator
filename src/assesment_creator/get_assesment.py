@@ -1,4 +1,3 @@
-from assesment_creator.logger import logger
 from assesment_creator.cutom_exception import InvalidURLException
 from assesment_creator.helper import output_file, create_docx
 from ensure import ensure_annotations

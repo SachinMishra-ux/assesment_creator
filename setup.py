@@ -1,11 +1,9 @@
 import setuptools
-try:
-   import pypandoc
-   long_description = pypandoc.convert_file('README.md', 'rst')
-except(IOError, ImportError):
-   long_description = open('README.md').read()
 
-__version__ = "0.0.3"
+with open("README.md", "r", encoding="utf-8") as f:
+    long_description = f.read()
+
+__version__ = "0.0.2"
 
 REPO_NAME = "assesment_creator"
 AUTHOR_USER_NAME = "SachinMishra-ux"
@@ -19,6 +17,7 @@ setuptools.setup(
     author_email=AUTHOR_EMAIL,
     description="assesment creator python package",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     project_urls={
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
