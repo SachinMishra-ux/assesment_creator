@@ -1,5 +1,5 @@
 import pytest
-from assesment_creator.get_assesment import get_data
+from assesment_creator import get_data
 from assesment_creator.cutom_exception import InvalidURLException
 
 

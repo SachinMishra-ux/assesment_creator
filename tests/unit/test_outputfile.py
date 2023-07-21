@@ -1,5 +1,5 @@
 import pytest
-from assesment_creator.helper import output_file
+from assesment_creator import output_file
 
 test_data = [
     ("abc", 'abc.docx'),
