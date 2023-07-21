@@ -31,7 +31,7 @@ def get_data(link: str) -> list:
 def create_assesment(form_link: str, file_name: str) -> str:
     try:
         if form_link and file_name is not None:
-            output_file(file_name)
+            file_name= output_file(file_name)
             content_list = get_data(form_link)
             ans = create_docx(content_list, file_name)
             if ans is not None:

@@ -2,16 +2,19 @@ from ensure import ensure_annotations
 import docx
 import os
 
-
+@ensure_annotations
 def output_file(file_name: str) -> str:
     output_file = ""
     splitted_file_name = file_name.split(".")
+    print(splitted_file_name)
 
     if "." in file_name and splitted_file_name[-1] != "docx":
         output_file = splitted_file_name[0] + ".docx"
 
     elif "." not in file_name:
         output_file = file_name + ".docx"
+    else:
+        output_file = file_name
     return output_file
 
 
