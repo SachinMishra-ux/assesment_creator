@@ -3,6 +3,7 @@ site_name: assesment_creator
 # defeine TOC or order of website-
 nav:
   - Home: index.md
+  - APIrefrence: APIreferences.md
 
 site_author: Sachin Mishra
 site_description: >-
