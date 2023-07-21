@@ -4,7 +4,7 @@ import io
 with io.open("README.md", encoding="utf-8") as f:
     long_description = f.read()
 
-__version__ = "0.0.6"
+__version__ = "0.0.5"
 
 REPO_NAME = "assesment_creator"
 AUTHOR_USER_NAME = "SachinMishra-ux"
