@@ -2,6 +2,7 @@ from ensure import ensure_annotations
 import docx
 import os
 
+
 @ensure_annotations
 def output_file(file_name: str) -> str:
     output_file = ""
